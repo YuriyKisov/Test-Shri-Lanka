@@ -1,0 +1,1126 @@
+﻿@font-face {
+	font-family: "Arkhip";
+	src: url('("..Fonts/Arkhip_font.otf")');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Osnova Pro";
+	src: url('("..Fonts/OSNOVAPRO.OTF")');
+	src: url('("..Fonts/OSNOVAPRO-ITALIC.OTF")');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-width:780px;
+	@basesize:1px;
+.fixed {
+	z-index: 99; 
+	position: fixed; 
+	left: 20%; 
+	top: @basesize * 25;
+	width: 100%;	
+}
+.fixed-order {
+	z-index: 99; 
+	position: fixed;
+	left:15%; 
+	top: @basesize * 100;
+	width: 100%;	
+}
+	.Main {
+		width: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content:space-between;
+		box-sizing: border-box;
+		font-size:0px;
+		margin: auto;
+		@blockWidth:@basesize * 750;
+		header {
+			width:@blockWidth;
+			margin:auto;
+			padding-top:@basesize * 42;
+			padding-bottom:@basesize * 24;
+			display:grid;
+			justify-content:space-between;
+			box-sizing: border-box;
+			position: relative;
+			grid-template-rows: repeat(3, auto);
+			grid-template-columns: repeat(2, auto);
+			grid-gap:0px;
+			grid-template-areas:
+					"logo zayavka"
+					"logo contact"
+					"navigation navigation";
+			.logo {
+				width: @basesize * 241;
+				display: flex;
+				flex-flow: row nowrap;
+				box-sizing: border-box;
+				justify-content:space-between;
+				align-items:center;
+				grid-area: logo;
+				.logotype {
+					display:block;
+					box-sizing:border-box;
+					width: @basesize * 94;
+					height: @basesize * 94;
+					background-image: url(image/logo.png);
+					background-repeat:no-repeat;
+					background-size: cover;
+				}
+				.Unity {
+					width: @basesize * 130;
+					height: @basesize * 52;
+					display:block;
+					box-sizing:border-box;
+					background-image: url(image/Unity.png);
+					background-repeat:no-repeat;
+					background-size: cover;
+				}
+			}
+			.contact {
+				width: @basesize * 419;
+				display:flex;
+				flex-flow:row nowrap;
+				justify-self:flex-end;
+				justify-content:space-around;
+				box-sizing: border-box;
+				grid-area: contact;
+				.telephone {
+					color: #808080;
+					font-family: "Osnova Pro";
+					font-size: @basesize * 16;
+					font-weight: 400;
+					line-height: @basesize * 24;
+					&:before {
+						content:"";
+						display:inline-block;
+						box-sizing:border-box;
+						vertical-align:middle;
+						width: @basesize * 14;
+						height: @basesize * 15;
+						margin-right:@basesize * 4;
+						background-image: url(image/tel_grey.png);
+						background-repeat:no-repeat;
+						background-size: cover;
+					}
+				}
+				.adress {
+					color: #b3b3b3;
+					font-family: "Osnova Pro";
+					font-size: @basesize * 14;
+					font-weight: 400;
+					line-height: @basesize * 24;
+				}
+			}
+			button {
+				display:flex;
+				justify-self: flex-end;
+				width: @basesize * 153;
+				height: @basesize * 40;
+				padding: 0;
+				background-color:#ffffff;
+				border: 1px solid #749f00;
+				border-radius: @basesize * 3;
+				grid-area: zayavka;
+				p {
+					width:@basesize * 123;
+					color: #739e00;
+					font-family: "Osnova Pro";
+					font-size: @basesize * 16;
+					font-weight: 400;
+					line-height: @basesize * 21;
+					margin: 0 auto;
+				}
+			}
+			nav {
+				display: flex;
+				width: @basesize * 660;
+				box-sizing: border-box;
+				justify-content: space-between;
+				justify-self:flex-end;
+				grid-area: navigation;
+				a {
+					display:inline-block;
+					text-decoration: none;
+					color: #40549e;
+					font-family: "Osnova Pro";
+					font-size: @basesize * 16;
+					font-weight: 400;
+					line-height: @basesize * 16;
+					&:first-child:before {
+						content:"";
+						display:inline-block;
+						box-sizing:border-box;
+						vertical-align: top;
+						width: @basesize * 16;
+						height: @basesize * 16;
+						margin-right:@basesize * 3;
+						background-image: url(image/star_green.png);
+						background-repeat:no-repeat;
+						background-size: cover;
+					}
+					&:nth-child(2):before {
+						content:"";
+						display:inline-block;
+						vertical-align: middle;
+						box-sizing:border-box;
+						width: @basesize * 16;
+						height: @basesize * 16;
+						margin-right:@basesize * 3;
+						background-image: url(image/search.png);
+						background-repeat:no-repeat;
+						background-size: cover;
+					}
+				}
+			}
+		}
+		.background {
+			width: 100%;
+			height: @basesize * 350;
+			display:block;
+			box-sizing:border-box;
+			background-image: url(image/back-main.png);
+			background-repeat:no-repeat;
+			background-size: cover;
+		}
+		.country {
+			width: 100%;
+			display:flex;
+			box-sizing: border-box;
+			background-color:#ab4a69;
+			margin-bottom:@basesize * 19;
+				.content {
+					display:flex;
+					width: @basesize * 750;
+					flex-flow: column nowrap;
+					box-sizing: border-box;
+					margin: auto;
+					padding-top:@basesize * 14;
+					padding-bottom:@basesize * 18;
+					.name {
+						display:flex;
+						flex-flow:row nowrap;
+						justify-content:flex-start;
+						align-items:center;
+						box-sizing:border-box;
+						p {
+							color: #ffffff;
+							font-family: "Osnova Pro";
+							font-size: @basesize * 16;
+							font-weight: 400;
+							line-height: @basesize * 18;
+							border-bottom: 1px solid #bc9fb3;
+						}
+						&:before {
+							content:"";
+							display:block;
+							vertical-align: middle;
+							width: @basesize * 30;
+							height: @basesize * 21;
+							margin-right: @basesize * 8;
+							box-sizing:border-box;
+							background-image: url(image/flag.png);
+							background-repeat:no-repeat;
+							background-size: cover;
+						}
+						&:after {
+							content:"";
+							display:block;
+							width: @basesize * 5;
+							height: @basesize * 9;
+							margin-left:@basesize * 7;
+							box-sizing:border-box;
+							background-image: url(image/arrow_right.png);
+							background-repeat:no-repeat;
+							background-size: cover;
+						}
+					}
+					.club {
+						display:flex;
+						flex-flow: row nowrap;
+						justify-content:flex-start;
+						width: 100%;
+						margin-top:@basesize * 10;
+						margin-bottom:@basesize * 20;
+						h1 {
+							color: #ffffff;
+							font-family: Arkhip;
+							font-size: @basesize * 28;
+							font-weight: 400;
+							line-height: @basesize * 21;
+						}
+						.exclusive {
+							display:block;
+							width: @basesize * 112;
+							height: @basesize * 23;
+							margin-left:@basesize * 12;
+							border: 1px solid #ffffff;
+							border-radius:@basesize * 12;
+							p {
+								color: #ffffff;
+								font-family: "Osnova Pro";
+								font-size: @basesize * 12;
+								font-weight: 400;
+								line-height: @basesize * 24;
+								text-transform: uppercase;
+								letter-spacing: @basesize * 0.6;
+								&:before {
+									content:"";
+									display:inline-block;
+									vertical-align:middle;
+									width: @basesize * 15;
+									height: @basesize * 15;
+									margin-bottom:@basesize * 5;
+									margin-left:@basesize * 3;
+									margin-right:@basesize * 2;
+									box-sizing:border-box;
+									background-image: url(image/star_white.png);
+									background-repeat:no-repeat;
+									background-size: cover;
+								}
+							}
+						}
+					}
+				}	
+				.about {
+					display:flex;
+					flex-flow: row nowrap;
+					align-items:center;
+					box-sizing:border-box;
+					.opisanie {
+						display:flex;
+						box-sizing:border-box;
+						width: @basesize * 149;
+						height: @basesize * 36;
+						background-color:#ffffff;
+						border-radius:@basesize * 2;
+						p {
+							color: #d64b74;
+							margin: auto;
+							font-family: "Osnova Pro";
+							font-size: @basesize * 16;
+							font-weight: 400;
+							line-height: @basesize * 21;
+						}
+					}
+					div:nth-child(2) {
+						width: @basesize * 112;
+						height: @basesize * 36;
+						display:flex;
+						align-items:center;
+						box-sizing:border-box;
+						border-right: 1px solid #b38198;
+						p {
+							color: #ffffff;
+							font-family: "Osnova Pro";
+							margin: auto;
+							font-size: @basesize * 16;
+							font-weight: 400;
+							line-height: @basesize * 21;
+						}
+					}
+					div:nth-child(3) {
+						width: @basesize * 105;
+						height: @basesize * 36;
+						display:flex;
+						align-items:center;
+						box-sizing:border-box;
+						p {
+							color: #ffffff;
+							margin: auto;
+							font-family: "Osnova Pro";
+							font-size: @basesize * 16;
+							font-weight: 400;
+							line-height: @basesize * 21;
+						}
+					}
+				}
+			}
+		.container {
+			display:flex;
+			flex-flow:column nowrap;
+			justify-content:flex-start;
+			font-size:0;
+			margin:auto;
+			@containerwidth:@basesize * 780;
+			width:@containerwidth;
+			.order {
+				width: @basesize * 780;
+				display:flex;
+				flex-flow:column nowrap;
+				box-sizing: border-box;
+				margin:auto;
+				background-color:#f7f7f7;
+				border-radius:@basesize * 10;
+				.top {
+					width: @containerwidth;
+					display:flex;
+					flex-flow:row nowrap;
+					justify-content:flex-start;
+					align-items:center;
+					margin-left: @basesize * 18;
+					margin-top:@basesize * 21;
+					margin-bottom:@basesize * 19;
+					p {
+					color: #000000;
+					font-family: "Osnova Pro";
+					font-size: @basesize * 16;
+					font-weight: 400;
+					line-height: @basesize * 24;
+						&:before {
+							content:"";
+							display:inline-block;
+							vertical-align: middle;
+							width: @basesize * 30;
+							height: @basesize * 24;
+							margin-right: @basesize * 9;
+							box-sizing:border-box;
+							background-image: url(image/flag.png);
+							background-repeat:no-repeat;
+							background-size: cover;
+						}
+					}
+				}
+				.middle {
+					width: @containerwidth;
+					display:flex;
+					flex-flow:row nowrap;
+					box-sizing: border-box;
+					margin:auto;
+					margin-left: @basesize * 18;
+					border-bottom: 1px solid #e0e0e0;
+					border-top: 1px solid #e0e0e0;
+					padding-top:@basesize * 17;
+					margin-bottom:@basesize * 15;
+					.block-left {
+						width: 50%;
+						display:flex;
+						flex-flow:column nowrap;
+						justify-content:flex-start;
+						box-sizing: border-box;
+						.beach {
+							width: 100%;
+							display:flex;
+							flex-flow:row nowrap;
+							align-items:center;
+							box-sizing: border-box;
+							margin-bottom:@basesize * 21;
+							p {
+								color: #000000;
+								font-family: "Osnova Pro";
+								font-size: @basesize * 16;
+								font-weight: 400;
+								line-height: @basesize * 24;
+							}
+							.umbrella {
+								&:before {
+									content:"";
+									display:inline-block;
+									vertical-align:middle;
+									width: @basesize * 27;
+									height: @basesize * 24;
+									margin-right:@basesize * 7;
+									box-sizing:border-box;
+									background-image: url(image/type_beach.png);
+									background-repeat:no-repeat;
+									background-size: cover;
+								}
+							}
+							.plane {
+								margin-left:@basesize * 27px;
+								&:before {
+									content:"";
+									display:inline-block;
+									vertical-align:middle;
+									width: @basesize * 21;
+									height: @basesize * 24;
+									margin-right:@basesize * 5;
+									box-sizing:border-box;
+									background-image: url(image/transport_plane.png);
+									background-repeat:no-repeat;
+									background-size: cover;
+								}
+							}
+						}
+						h3 {
+							color: #808080;
+							font-family: "Osnova Pro";
+							font-size: @basesize * 12;
+							font-weight: 400;
+							line-height: @basesize * 24;
+							text-transform: uppercase;
+						}
+						.people {
+							width: 100%;
+							display:flex;
+							flex-flow:row nowrap;
+							box-sizing: border-box;
+							justify-content:flex-start;
+							align-items:center;
+							div {
+								display:flex;
+								justify-content:center;
+								align-items:center;
+								box-sizing:border-box;
+								border-radius:@basesize * 2;
+								background-color:#4559a2;
+								margin-top: @basesize * 9;
+								margin-bottom:@basesize * 25;
+								p {
+									color: #ffffff;
+									font-family: "Osnova Pro";
+									font-size: @basesize * 14;
+									font-weight: 400;
+									line-height: @basesize * 24;
+								}
+							}
+							.adult {
+								width: @basesize * 140;
+								height: @basesize * 34;
+								margin-right: @basesize * 10;
+								p {
+									&:after {
+									content:"";
+									display:inline-block;
+									vertical-align:middle;
+									width: @basesize * 9;
+									height: @basesize * 5;
+									margin-left:@basesize * 37;
+									box-sizing:border-box;
+									background-image: url(image/arrow_down.png);
+									background-repeat:no-repeat;
+									background-size: cover;
+									}
+								}
+							}
+							.child {
+								width: @basesize * 99;
+								height: @basesize * 34;
+								p {
+									&:after {
+									content:"";
+									display:inline-block;
+									vertical-align:middle;
+									width: @basesize * 9;
+									height: @basesize * 5;
+									margin-left:@basesize *8;
+									box-sizing:border-box;
+									background-image: url(image/arrow_down.png);
+									background-repeat:no-repeat;
+									background-size: cover;
+									}
+								}
+							}
+						}
+						.days {
+							width: @basesize * 190;
+							display:flex;
+							flex-flow:row nowrap;
+							box-sizing: border-box;
+							justify-content:flex-start;
+							align-items:center;
+							border-radius:@basesize * 4;
+							border: 1px solid grey;
+							margin-top:@basesize * 12;
+							margin-bottom: @basesize * 25;
+							div {
+								width: @basesize * 63;
+								height: @basesize * 63;
+								display:flex;
+								justify-content:center;
+								align-items:center;
+								box-sizing:border-box;
+								p {
+									color: #40549e;
+									font-family: "Osnova Pro";
+									font-size: @basesize * 12;
+									font-weight: 400;
+									line-height: @basesize * 18;
+									text-align:center;
+									span {
+										font-size: @basesize * 28;
+									}
+								}
+								&:first-child {
+									border-right: 1px solid grey;
+									background-color:#4559a2;
+									p {
+										color: #ffffff;
+									}
+								}
+								&:nth-child(2) {
+									border-right: 1px solid grey;
+								}
+							}
+						}
+					}
+					.block-right {
+						width: 50%;
+						display:flex;
+						flex-flow:column nowrap;
+						justify-content:flex-start;
+						box-sizing: border-box;
+						h3, h4, h5 {
+							color: #808080;
+							font-family: "Osnova Pro";
+							font-size: @basesize * 12;
+							font-weight: 400;
+							line-height: @basesize * 24;
+							text-transform: uppercase;
+						}
+						p {
+							color: #000000;
+							font-family: "Osnova Pro";
+							font-size:@basesize * 16;
+							font-weight: 400;
+							line-height: @basesize * 24;
+						}
+						.deener {
+							width: 100%;
+							color: #000000;
+							font-family: "Osnova Pro";
+							font-size: @basesize * 16;
+							font-weight: 400;
+							line-height: @basesize * 24;
+							margin-bottom:@basesize * 27;
+							&:before {
+								content:"HB";
+								color: #ffffff;
+								background-color:#b3b3b3;
+								border-radius:2px;
+								font-family: "Osnova Pro";
+								font-size: @basesize * 16;
+								font-weight: 400;
+								line-height: @basesize * 21;
+								text-align:center;
+								vertical-align:middle;
+								text-transform: uppercase;
+								display:inline-block;
+								width: @basesize * 36;
+								height: @basesize * 21;
+								box-sizing:border-box;
+								margin-right:@basesize * 7;
+							}
+						}
+						h4 {
+							margin-bottom:@basesize * 13;
+							p {
+								color: #000000;
+								font-family: "Osnova Pro";
+								font-size: @basesize * 16;
+								font-weight: 400;
+								line-height: @basesize * 24;
+							}
+						}
+						h5 {
+							margin-top:@basesize *25;
+						}
+						div {
+							width: 100%;
+							display:flex;
+							flex-flow:row nowrap;
+							box-sizing: border-box;
+							justify-content:flex-start;
+							align-items:center;
+							p {
+								color: #000000;
+								font-family: "Osnova Pro";
+								font-size: @basesize * 16;
+								font-weight: 400;
+								line-height: @basesize * 24;
+								margin-right:@basesize * 7;
+								margin-bottom:@basesize * 8;
+								&:before {
+									content:"";
+									background-color:#739e00;
+									border-radius:@basesize * 4.5;
+									vertical-align:middle;
+									display:inline-block;
+									width: @basesize * 9;
+									height: @basesize * 9;
+									margin-right:@basesize * 3;
+									box-sizing:border-box;
+								}
+							}
+						}
+						.vise {
+							color: #ff1d25;
+							font-family: "Osnova Pro";
+							font-size: @basesize * 16;
+							font-weight: 400;
+							line-height: @basesize * 24;
+							&:before {
+								content:"";
+								background-color:#ff1d25;
+								border-radius:4.5px;
+								vertical-align:middle;
+								display:inline-block;
+								width: @basesize * 9;
+								height: @basesize * 9;
+								margin-right:@basesize * 3;
+								box-sizing:border-box;
+							}
+							&:after {
+								content:"";
+								width: @basesize * 210;
+								display:block;
+								box-sizing:border-box;
+								border-top: 1px solid #faa0a3;
+								margin-left:@basesize * 11;
+							}
+						}
+					}
+				}
+				.down {
+					width: @containerwidth;
+					display:flex;
+					flex-flow:column nowrap;
+					justify-content:flex-start;
+					padding-bottom:@basesize * 21;
+					margin:auto;
+					margin-left: @basesize * 18;
+					p {
+						color: #666666;
+						font-family: "Osnova Pro";
+						font-size: @basesize * 14;
+						font-style: italic;
+					}
+					.price {
+						color: #739e00;
+						font-family: Arkhip;
+						font-size: @basesize * 18;
+						font-weight: 400;
+						line-height: @basesize * 21;
+						font-style: normal;
+						letter-spacing: @basesize * 0.9;
+						margin-bottom: @basesize * 11;
+						span {
+							font-size: @basesize * 28;
+							letter-spacing: @basesize * 1.4;
+						}
+					}
+					.accept {
+						margin-top:@basesize * 20;
+						.OK {
+						width: @basesize * 188;
+						height: @basesize * 35;
+						border: 1px solid #678f01;
+						background-color:#73a800;
+						border-radius:@basesize * 2;
+						}
+						p {
+							color: #ffffff;
+							font-family: "Osnova Pro";
+							font-size: @basesize * 16;
+							font-weight: 400;
+							line-height: @basesize * 21;
+							font-style: normal;
+						}
+						.cancel {
+							width: @basesize * 162;
+							height: @basesize * 36;
+							border: 1px solid #40549e;
+							background-color:#f7f7f7;
+							border-radius:@basesize * 2;
+							margin-left:@basesize * 19;
+							p {
+								color: #40549e;
+								font-family: "Osnova Pro";
+								font-size: @basesize * 16;
+								font-weight: 400;
+								line-height: @basesize * 21;
+							}
+						}
+					}
+				}
+			}
+			.hotel {
+				width: @basesize * 750;
+				display:flex;
+				flex-flow:row nowrap;
+				justify-content:flex-start;
+				margin-left: @basesize * 15;
+				margin:auto;
+				margin-top:@basesize * 38;
+				p {
+					color: #000000;
+					font-family: "Osnova Pro";
+					font-size: @basesize * 16;
+					font-weight: 400;
+					line-height: @basesize * 24;
+				}
+			}
+			.gallery {
+				width: @basesize * 750;
+				height: @basesize * 446;
+				display:flex;
+				box-sizing:border-box;
+				justify-content:flex-end;
+				align-items:flex-end;
+				background-image: url(image/galery-big.png);
+				background-repeat:no-repeat;
+				background-size: cover;
+				margin: auto;
+				margin-top:@basesize * 46;
+				margin-bottom:@basesize * 54;
+				div {
+					width: @basesize * 250;
+					height: @basesize * 149;
+					display:flex;
+					box-sizing:border-box;
+					opacity:0.8;
+					background-image: url(image/background-img.png);
+					background-repeat:no-repeat;
+					background-size: cover;
+					img {
+					display:block;
+					width: @basesize * 68;
+					height: @basesize * 65;
+					margin: auto;
+					}
+				}
+			}
+			.options {
+				width: @basesize * 750;
+				height: @basesize * 329;
+				display:flex;
+				flex-flow:column nowrap;
+				justify-content:space-between;
+				align-items:flex-start;
+				box-sizing:border-box;
+				margin:auto;
+					.first-day, .second-day {
+						display:flex;
+						box-sizing:border-box;
+						flex-flow:column nowrap;
+						h3 {
+						color: #d64b74;
+						font-family: "Osnova Pro";
+						font-size: @basesize * 16;
+						font-weight: 400;
+						line-height: @basesize * 24;
+						letter-spacing:@basesize * 1.6;
+						text-transform: uppercase;
+						margin-bottom: @basesize * 20;
+						}
+						p {
+							color: #000000;
+							font-family: "Osnova Pro";
+							font-size: @basesize * 16;
+							font-weight: 400;
+							line-height: @basesize * 24;
+						}
+					}
+				}
+				.galary-small {
+					width: @basesize * 750;
+					height: @basesize * 149;
+					display:flex;
+					box-sizing:border-box;
+					justify-content:flex-end;
+					align-items:flex-end;
+					background-image: url(image/galery-small.png);
+					background-repeat:no-repeat;
+					background-size: cover;
+					margin:auto;
+					margin-top:@basesize * 36;
+					margin-bottom:@basesize * 55;
+				}
+			}
+		}
+	}
+@media (min-width: 1190px) {
+	 body {
+		display: flex;
+		@basesize: 1px;
+		min-width:1190px;
+	.fixed {
+	z-index: 99; 
+	position: fixed; 
+	left: 40%; 
+	top: @basesize * 15;
+	width: 100%;	
+	}
+	.fixed-order {
+	z-index: 99; 
+	position: fixed;
+	left: 65%; 
+	top: @basesize * 400;
+	width: 100%;	
+	}
+		.Main {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content:space-between;
+			box-sizing: border-box;
+			margin: auto;
+			width:100%;
+			position:relative;
+			header {
+				width:@basesize * 1190;
+				padding-top:@basesize * 42;
+				padding-bottom:@basesize * 24;
+				display:grid;
+				justify-content:space-between;
+				justify-self:flex-start;
+				box-sizing: border-box;
+				position: relative;
+				grid-template-rows: repeat(2, auto);
+				grid-template-columns: repeat(3, auto);
+				grid-gap:0px;
+				grid-template-areas:
+						"logo contact zayavka"
+						"logo navigation navigation";
+				.contact {
+					margin-left:@basesize * 250;
+					align-self:center;
+					margin-bottom: @basesize * 20;
+				} 
+			}
+			.background {
+				width: 100%;
+			}
+			.country {
+				.content {
+					margin:auto;
+					width: @basesize * 1190;
+				}
+			}
+			.container {
+				display:grid;
+				grid-template-columns: 780px 400px;
+				grid-template-rows: repeat(4, auto);
+				grid-template-areas:
+				"hotel ."
+				"gallery order"
+				"options order"
+				"galary-small . ";
+				grid-gap:0px;
+				justify-content:flex-start;
+				justify-self:flex-start;
+				@containerwidth:@basesize * 739;
+				width:@basesize * 1190;
+				.order {
+					width: @basesize * 399;
+					display:flex;
+					margin:0;
+					flex-flow:column nowrap;
+					justify-content:flex-start;
+					box-sizing: border-box;
+					background-color:#f7f7f7;
+					border-radius:@basesize * 10;
+					margin-top:@basesize * (-300);
+					margin-bottom:@basesize * 420;
+					z-index:1;
+					grid-area: order;
+					.top {
+						width: 100%;
+					}
+					.middle {
+						width: @basesize * 369;
+						display:flex;
+						flex-flow:column nowrap;
+						justify-content:flex-start;
+						box-sizing: border-box;
+						margin:auto;
+						margin-left: @basesize * 18;
+						border-bottom: 1px solid #e0e0e0;
+						border-top: 1px solid #e0e0e0;
+						padding-top:@basesize * 17;
+						margin-bottom:@basesize * 15;
+						.block-right {
+							width: 100%;
+							padding-bottom:@basesize * 23;
+						}
+						.block-left {
+							width: 100%;
+						}
+					}
+					.down {
+						width: 100%;
+					}
+				}
+				.hotel {
+				margin:auto;
+				margin-top:@basesize * 38;
+				grid-area: hotel;
+				}
+				.gallery {
+					margin:auto;
+					margin-top:@basesize * 46;
+					margin-bottom:@basesize * 54;
+					grid-area: gallery;
+				}
+				.options {
+					margin:auto;
+					grid-area: options;
+				}
+				.galary-small {
+					margin:auto;
+					margin-top:@basesize * 36;
+					margin-bottom:@basesize * 55;
+					grid-area: galary-small;
+				}
+			}
+		}
+	}
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 780px),
+only screen and ( min--moz-device-pixel-ratio: 2) and (min-width: 780px),
+only screen and ( -o-min-device-pixel-ratio: 2) and (min-width: 780px),
+only screen and ( min-device-pixel-ratio: 2)  and (min-width: 780px),
+only screen and ( min-resolution: 2dppx)  and (min-width: 780px) { 
+	 body {
+		display: flex;
+		@basesize: 1px;
+		min-width:780px;
+	}
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1190px),
+only screen and ( min--moz-device-pixel-ratio: 2) and (min-width: 1190px),
+only screen and ( -o-min-device-pixel-ratio: 2) and (min-width: 1190px),
+only screen and ( min-device-pixel-ratio: 2)  and (min-width: 1190px), 
+only screen and ( min-resolution: 2dppx)  and (min-width: 1190px) { 	
+  body {
+		display: flex;
+		@basesize: 1px;
+		min-width:1190px;
+	.fixed {
+	z-index: 99; 
+	position: fixed; 
+	left: 40%; 
+	top: @basesize * 15;
+	width: 100%;	
+	}
+	.fixed-order {
+	z-index: 99; 
+	position: fixed;
+	left: 65%; 
+	top: @basesize * 400;
+	width: 100%;	
+	}
+		.Main {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content:space-between;
+			box-sizing: border-box;
+			margin: auto;
+			width:100%;
+			position:relative;
+			header {
+				width:@basesize * 1190;
+				padding-top:@basesize * 42;
+				padding-bottom:@basesize * 24;
+				display:grid;
+				justify-content:space-between;
+				justify-self:flex-start;
+				box-sizing: border-box;
+				position: relative;
+				grid-template-rows: repeat(2, auto);
+				grid-template-columns: repeat(3, auto);
+				grid-gap:0px;
+				grid-template-areas:
+						"logo contact zayavka"
+						"logo navigation navigation";
+				.contact {
+					margin-left:@basesize * 250;
+					align-self:center;
+					margin-bottom: @basesize * 20;
+				} 
+			}
+			.background {
+				width: 100%;
+			}
+			.country {
+				.content {
+					margin:auto;
+					width: @basesize * 1190;
+
+				}
+			}
+			.container {
+				display:grid;
+				grid-template-columns: 780px 400px;
+				grid-template-rows: repeat(4, auto);
+				grid-template-areas:
+				"hotel ."
+				"gallery order"
+				"options order"
+				"galary-small . ";
+				grid-gap:0px;
+				justify-content:flex-start;
+				justify-self:flex-start;
+				@containerwidth:@basesize * 739;
+				width:@basesize * 1190;
+				.order {
+					width: @basesize * 399;
+					display:flex;
+					margin:0;
+					flex-flow:column nowrap;
+					justify-content:flex-start;
+					box-sizing: border-box;
+					background-color:#f7f7f7;
+					border-radius:@basesize * 10;
+					margin-top:@basesize * (-300);
+					margin-bottom:@basesize * 420;
+					z-index:1;
+					grid-area: order;
+					.top {
+						width: 100%;
+					}
+					.middle {
+						width: @basesize * 369;
+						display:flex;
+						flex-flow:column nowrap;
+						justify-content:flex-start;
+						box-sizing: border-box;
+						margin:auto;
+						margin-left: @basesize * 18;
+						border-bottom: 1px solid #e0e0e0;
+						border-top: 1px solid #e0e0e0;
+						padding-top:@basesize * 17;
+						margin-bottom:@basesize * 15;
+						.block-right {
+							width: 100%;
+							padding-bottom:@basesize * 23;
+						}
+						.block-left {
+							width: 100%;
+						}
+					}
+					.down {
+						width: 100%;
+					}
+				}
+				.hotel {
+				margin:auto;
+				margin-top:@basesize * 38;
+				grid-area: hotel;
+				}
+				.gallery {
+					margin:auto;
+					margin-top:@basesize * 46;
+					margin-bottom:@basesize * 54;
+					grid-area: gallery;
+				}
+				.options {
+					margin:auto;
+					grid-area: options;
+				}
+				.galary-small {
+					margin:auto;
+					margin-top:@basesize * 36;
+					margin-bottom:@basesize * 55;
+					grid-area: galary-small;
+				}
+			}
+		}
+	}
+}

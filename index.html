@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>Maket Medium</title>
+</head>
+<body>
+<div class="Main">
+	<header>
+		<div class="logo">
+			<div class="logotype">
+				
+			</div>
+			<div class="Unity">
+				
+			</div>
+		</div>
+		<div class="contact">
+			<p class="telephone">+38 (099) 223-11-84</p>
+			<p class="adress">Одесса, Люфстдорфская дорога, 144</p>
+		</div>
+		<button><p>Оставить заявку</p></button>
+		<nav class="nav">
+			<a href="#">Эксклюзивные туры</a>
+			<a href="#">Поиск тура</a>
+			<a href="#">Путеводитель</a>
+			<a href="#">Информация</a>
+			<a href="#">Компания</a>
+		</nav>
+	</header>
+	<section class="background">
+		
+	</section>
+	<section class="country">
+			<div class="content">
+				<div class="name">
+					<p>Шри-ланка</p>
+				</div>
+				<div class="club">
+					<h1>Club Koggala Village</h1>
+					<div class="exclusive">
+						<p>эксклюзив!</p>
+					</div>
+				</div>
+				<div class="about">
+					<div class="opisanie"><p>Описание тура</p></div>
+					<div><p>Галлерея</p></div>
+					<div><p>Программа</p></div>
+				</div>
+			</div>
+	</section>
+	<div class="container">
+		<section class="order">
+			<div class="top">
+				<p>Шри Ланка</p>
+			</div>
+			<div class="middle">
+				<div class="block-left">
+					<div class="beach">
+						<p class="umbrella">пляжный тур</p>
+						<p class="plane">авиа</p>
+					</div>
+					<h3>кто поедет</h3>
+					<div class="people">
+						<div class="adult"><p>1 взрослый</p></div>
+						<div class="child"><p>без детей</p></div>
+					</div>
+					<h3>Длительность</h3>
+					<div class="days">
+						<div><p><span>5</span></br>ночей</p></div>
+						<div><p><span>7</span></br>ночей</p></div>
+						<div><p><span>10</span></br>ночей</p></div>
+					</div>
+				</div>
+			<div class="block-right">
+				<h3>Питание</h3>
+				<p class="deener">завтрак и ужин</p>
+				<h4>Отправление</h4>
+				<p>каждую субботу и воскресенье</p>
+				<h5>Входит в путевку</h5>
+				<div> 
+					<p>авиа</p>
+					<p>проживание</p>
+					<p>страховка</p> 
+				</div>
+				<p class="vise">необходимо оформление визы!</p>
+			</div>
+			</div>
+			<div class="down">
+				<p class="price">от <span>32 325</span>    грн</p>
+				<p>за человека на 5 ночей</p>
+				<div class="accept">
+					<button class="OK"><p>Заказать тур</p></button>
+				<button class="cancel"><p>Отложить</p> </button>
+				</div>
+			</div>
+		</section>
+		<section class="hotel">
+			<p>Отель цена–качество. Удобные номера без излишеств. Большая территория. Первая линия. Широкий пляж. Отель в 2012 году прошел полную реновацию. В 2013 году отреставрированы бунгало, которые находятся ближе к океану. Относится к сети Koggala Beach Resort, куда входят отели Club Koggala Village 3*, Koggala Beach Hotel 3*+ и Long Beach Resort 4*. Можно пользоваться всей территорией этих трех отелей. Дискотека в отеле Koggala Beach Hotel 3*+, тренажерный зал в отеле Long Beach Resort 4*.</p>
+		</section>
+		<section class="gallery">
+			<div>
+				<img src="image/18.png">
+			</div>
+		</section>
+		<section class="options">
+			<div class="first-day">
+				<h3>1 день</h3>
+				<p>Вылет в Хургаду (а/к МАУ). Встреча в Хургаде с принимающей стороной. Групповой трансфер из аэропорта в отель. Размещение в номере. По приезду Вы прослушаете информацию о достопримечательностях Египта и возможных экскурсиях и круизах. Свободное время. Ночь в теле.</p>
+			</div>
+			<div class="second-day">
+				<h3>2 день</h3>
+				<p>Завтрак в отеле. После завтрака у Вас свободное время для отдыха на пляже и развлечений. Хургада славится своим пляжным отдыхом, так как каждый отель предоставляет все условия для комфортного размещения для всех без исключения. Во многих отелях предоставляется русскоязычная анимация для взрослых и детей, спа-услуги, многие экскурсии по стране, дайвинг-центры со всем оборудованием, хороший сервис и забота о каждом туристе. Изюминкой всех курортных городов Египта считается дайвинг. </p>
+			</div>
+		</section>
+		<section class="galary-small">
+			
+		</section>
+	</div>
+</div>
+
+	<script>
+if (document.body.clientWidth < 780){
+ $(function(){
+	 $(window).scroll(function() { 
+ 	 var top = $(document).scrollTop();
+  		if (top > 59) $('.nav').addClass('fixed');
+  		else $('.nav').removeClass('fixed');
+		});
+});
+
+$(function(){
+	$(window).scroll(function() { 
+	var top = $(document).scrollTop();
+		if (top > 290) $('.order').addClass('fixed-order'); 
+		else $('.order').removeClass('fixed-order');
+		 });
+});
+} if (document.body.clientWidth >=780) {
+	$(function(){
+	 $(window).scroll(function() { 
+ 	 var top = $(document).scrollTop();
+  		if (top > 118) $('.nav').addClass('fixed');
+  		else $('.nav').removeClass('fixed');
+		});
+});
+
+$(function(){
+	$(window).scroll(function() { 
+	var top = $(document).scrollTop();
+		if (top > 590) $('.order').addClass('fixed-order'); 
+		else $('.order').removeClass('fixed-order');
+		 });
+});
+} if (document.body.clientWidth >=1190) {
+	$(function(){
+	 $(window).scroll(function() { 
+ 	 var top = $(document).scrollTop();
+  		if (top > 86) $('.nav').addClass('fixed');
+  		else $('.nav').removeClass('fixed');
+		});
+});
+
+$(function(){
+	$(window).scroll(function() { 
+	var top = $(document).scrollTop();
+		if (top > 476) $('.order').addClass('fixed-order'); 
+		else $('.order').removeClass('fixed-order');
+		 });
+});
+}
+</script>
+</body>
+</html>
